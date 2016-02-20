@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Angular 2 Guatemala</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.8/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="app/public/css/styles.css">
+
+    <!-- 1. load libraries -->
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>
+
+    <!-- 2. configure systemjs -->
+    <script>
+        System.config({
+            packages: {
+                app: {
+                    format: 'register',
+                    defaultextension: 'js'
+                }
+            }
+        });
+        System.import('app/init')
+                .then(null, console.error.bind(console));
+    </script>
+
+</head>
+
+<!-- 3. display the application -->
+<body>
+<div class="container">
+<app>
+  <ul class="loading">
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</app>
+</div>
+</body>
+
+</html>
